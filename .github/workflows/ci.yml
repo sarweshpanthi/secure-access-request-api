@@ -31,6 +31,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run unit tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: pytest
 
       - name: Audit Python dependencies
