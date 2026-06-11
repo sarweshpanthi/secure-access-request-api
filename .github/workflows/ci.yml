@@ -35,10 +35,13 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}
         run: pytest
 
+      - name: Install security tools
+        run: |
+          pip install pip-audit
+
       - name: Audit Python dependencies
-        uses: pypa/gh-action-pip-audit@v1.0.0
-        with:
-          inputs: requirements.txt
+        run: |
+          pip-audit -r requirements.txt
 
       - name: Scan repository for secrets
         uses: gitleaks/gitleaks-action@v2
