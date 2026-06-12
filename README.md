@@ -16,7 +16,7 @@ The API has 3 endpoints:
 /access-request requires the authentication token from the demo user from login, if the token is invalid (if you don't have the logins), then you will be denied access to request.
 
 -------------------------------------- DEMO USERS ---------------------------------------------
-EMAIL                   PASSWORD
+EMAIL              |     PASSWORD
 
 low@project.com    |  lowpass
 medium@project.com |  mediumpass
@@ -111,7 +111,7 @@ Example response:
     "reason": "Privileged access requires manual review."
   }
 }
-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 
 -------------------------------------- Run Tests --------------------------------------
 pytest
@@ -193,3 +193,5 @@ If I was taking this to production, I would add:
 -------------------------------------- AI USAGE --------------------------------------
 
 I used AI to help plan the repo structure, draft some workflow examples, and troubleshoot GitHub Actions errors. I tested the app locally and validated the workflows in GitHub Actions.
+
+-----------------------------------------------------------------------------------------------
